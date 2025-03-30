@@ -25,6 +25,11 @@ variable "database_version" {
   default = "POSTGRES_17"
 }
 
+variable "max_connections" {
+  type    = number
+  default = 100
+}
+
 variable "deletion_protection" {
   type    = bool
   default = true

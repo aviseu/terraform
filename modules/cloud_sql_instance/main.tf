@@ -14,6 +14,11 @@ resource "google_sql_database_instance" "instance" {
     disk_size         = var.disk_size
     edition           = "ENTERPRISE"
 
+    database_flags {
+      name  = "max_connections"
+      value = var.max_connections
+    }
+
     backup_configuration {
       enabled = false
     }
